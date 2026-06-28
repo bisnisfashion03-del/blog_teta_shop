@@ -1,221 +1,151 @@
-/* --- Konfigurasi Dasar --- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background-color: #f4f7f6;
-  color: #333;
-  line-height: 1.6;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f7f6; /* Warna latar sedikit abu-abu muda agar terlihat premium */
+  color: #2d3436;
+  padding: 0 20px;
 }
 
-/* Animasi Muncul */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+main {
+  max-width: 500px; /* Maksimal lebar untuk tampilan mobile */
+  margin: auto;
 }
 
-.container {
-  max-width: 500px;
-  width: 100%;
-  margin: 0 auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-/* --- Header --- */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.logo-area img {
-  width: 45px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-.logo-text h2 {
-  font-size: 18px;
-}
-.logo-text span {
-  font-size: 12px;
-  color: #007bff;
-  font-weight: bold;
-}
-.install-btn {
-  text-decoration: none;
-  background: #eef5ff;
-  color: #007bff;
-  padding: 6px 15px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: bold;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease;
-}
-.install-btn:hover {
-  background-color: #d0e5ff;
-  transform: scale(1.03);
-}
-
-/* --- Hero --- */
+/* Hero Section */
 .hero {
   text-align: center;
-  margin-bottom: 30px;
-}
-.badge {
-  background: #fff3cd;
-  color: #856404;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-}
-.hero h1 {
-  font-size: 32px;
-  margin: 15px 0;
-  color: #111;
-}
-.hero p {
-  color: #666;
-  margin-bottom: 20px;
-}
-.download-btn {
-  text-decoration: none;
-  background: #000;
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: bold;
-  display: inline-block;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease;
-}
-.download-btn:hover {
-  transform: scale(1.03);
-  background-color: #333;
+  padding: 40px 0;
 }
 
-/* --- Preview --- */
+.badge {
+  background: #e0f2f1;
+  color: #00796b;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #00796b;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 121, 107, 0.3);
+}
+
+/* Preview Section */
 .preview {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 10px;
+  margin: 20px 0;
 }
-.preview video {
+.preview img {
   width: 140px;
-  border-radius: 20px;
-  background: #eee;
-}
-.maskot img {
-  width: 140px;
+  height: auto;
 }
 
-/* --- Fitir --- */
-.section-title {
-  text-align: center;
-  margin-bottom: 20px;
-}
+/* Feature Grid */
 .feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-}
-.feature-card {
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 20px;
-  text-align: center;
-}
-.feature-card .icon {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.feature-card h3 {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-.feature-card p {
-  font-size: 11px;
-  color: #777;
+  margin: 20px 0;
 }
 
-/* --- Statistik --- */
+.feature-card {
+  background: white;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* App Info */
+.app-info {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.app-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+}
+.install-btn {
+  margin-left: auto;
+  background: #f0f0f0;
+  padding: 5px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #00796b;
+  font-weight: bold;
+}
+
 .stats {
   display: flex;
   justify-content: space-around;
-  margin: 30px 0;
-  background: #007bff;
-  color: #fff;
-  padding: 20px;
-  border-radius: 20px;
-}
-.stat-item {
   text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
 }
 .stat-item h2 {
-  font-size: 18px;
+  font-size: 1.1rem;
 }
 .stat-item span {
-  font-size: 10px;
-  opacity: 0.8;
+  font-size: 0.7rem;
+  color: #636e72;
 }
 
-/* --- QR & Footer --- */
+/* Download Section */
 .download {
   text-align: center;
-  margin-bottom: 30px;
+  padding: 30px 0;
 }
 .download img {
-  width: 150px;
+  width: 200px;
   margin: 15px 0;
-  border: 5px solid #f4f7f6;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 .playstore-btn {
   display: block;
-  text-decoration: none;
-  background: #007bff;
-  color: white;
-  padding: 12px;
-  border-radius: 50px;
+  color: #00796b;
   font-weight: bold;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease;
+  text-decoration: none;
+  margin-top: 10px;
 }
-.playstore-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.03);
-}
+
+/* Footer */
 .social {
   text-align: center;
+  padding-bottom: 40px;
 }
 .social-list {
   display: flex;
@@ -224,14 +154,6 @@ body {
   margin-top: 10px;
 }
 .social-list a {
-  text-decoration: none;
-  color: #555;
-  font-size: 14px;
-}
-footer {
-  text-align: center;
-  font-size: 12px;
-  color: #999;
-  margin-top: 30px;
-  padding-bottom: 10px;
+  color: #888;
+  font-size: 0.9rem;
 }
